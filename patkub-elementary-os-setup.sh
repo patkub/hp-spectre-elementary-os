@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# ask for sudo
+if [ $EUID != 0 ]; then
+    sudo "$0" "$@"
+    exit $?
+fi
+
 # download package info
 apt-get update
 
