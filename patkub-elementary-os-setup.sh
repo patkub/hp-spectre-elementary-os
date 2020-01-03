@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# download package info
+apt-get update
+
 # enable wifi
 apt-get install linux-oem-osp1 linux-firmware
 
