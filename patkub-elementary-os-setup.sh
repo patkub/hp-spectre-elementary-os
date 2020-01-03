@@ -25,6 +25,12 @@ apt-get install -y \
 	libavcodec-extra \
 	libdvd-pkg
 
+# uninstall default apps
+apt-get purge -y \
+	epiphany-browser \
+	epiphany-browser-data \
+	pantheon-mail
+
 # install google chrome
 wget -O /tmp/linux_signing_key.pub https://dl.google.com/linux/linux_signing_key.pub
 apt-key add /tmp/linux_signing_key.pub
@@ -56,6 +62,7 @@ apt-get install -y \
 	steam \
 	texstudio \
 	tlp \
+	thunderbird \
 	vlc
 
 # install snaps
