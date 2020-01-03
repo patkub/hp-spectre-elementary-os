@@ -57,6 +57,7 @@ apt-get install -y \
 	nload \
 	neofetch \
 	p7zip \
+	psensor \
 	qbittorrent \
 	snapd \
 	speedtest-cli \
