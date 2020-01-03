@@ -6,8 +6,18 @@ apt-get update
 # enable wifi
 apt-get install linux-oem-osp1 linux-firmware
 
+# drivers
+ubuntu-drivers autoinstall
+
+# manage the repositories that you install software from (common)
+apt-get install software-properties-common
+apt-get update
+
 # multimedia codecs and dvd playback
-apt-get install ubuntu-restricted-extras libavcodec-extra libdvd-pkg
+apt-get install \
+	ubuntu-restricted-extras \
+	libavcodec-extra \
+	libdvd-pkg
 
 # install google chrome
 wget -O /tmp/linux_signing_key.pub https://dl.google.com/linux/linux_signing_key.pub
