@@ -56,6 +56,7 @@ apt-get install -y \
 	mpv \
 	nload \
 	neofetch \
+	p7zip \
 	qbittorrent \
 	snapd \
 	speedtest-cli \
