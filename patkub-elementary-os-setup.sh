@@ -28,7 +28,7 @@ apt-get install \
 	qbittorrent \
 	snapd \
 	steam \
-	textstudio \
+	texstudio \
 	vlc
 
 # install snaps
@@ -44,3 +44,10 @@ snap install node --classic
 
 # notetaking
 snap install xournalpp
+
+# dark theme
+touch "$HOME/.config/gtk-3.0/settings.ini"
+cat > "$HOME/.config/gtk-3.0/settings.ini" <<EOL
+[Settings]
+gtk-application-prefer-dark-theme=1
+EOL
