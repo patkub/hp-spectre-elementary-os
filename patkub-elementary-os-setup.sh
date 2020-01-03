@@ -32,15 +32,19 @@ apt-get install \
 	blender \
 	firefox \
 	gimp \
+	git \
 	gnome-system-monitor \
+	htop \
 	kazam \
 	kdenlive \
 	krita \
 	libreoffice \
 	linuxdcpp \
 	mpv \
+	nload \
 	qbittorrent \
 	snapd \
+	speedtest-cli \
 	steam \
 	texstudio \
 	vlc
