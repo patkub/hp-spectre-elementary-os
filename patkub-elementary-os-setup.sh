@@ -3,8 +3,11 @@
 # enable wifi
 apt-get install linux-oem-osp1 linux-firmware
 
+# multimedia codecs and dvd playback
+apt-get install ubuntu-restricted-extras libavcodec-extra libdvd-pkg
+
 # install google chrome
-wget -O /tmp/linux_signing_key.pub https://dl.google.com/linux/linux_signing_key.pub 
+wget -O /tmp/linux_signing_key.pub https://dl.google.com/linux/linux_signing_key.pub
 apt-key add /tmp/linux_signing_key.pub
 apt-get update
 apt-get install google-chrome-stable
