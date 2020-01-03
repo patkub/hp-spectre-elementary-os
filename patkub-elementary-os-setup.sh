@@ -4,17 +4,17 @@
 apt-get update
 
 # enable wifi
-apt-get install linux-oem-osp1 linux-firmware
+apt-get install -y linux-oem-osp1 linux-firmware
 
 # drivers
 ubuntu-drivers autoinstall
 
 # manage the repositories that you install software from (common)
-apt-get install software-properties-common
+apt-get install -y software-properties-common
 apt-get update
 
 # multimedia codecs and dvd playback
-apt-get install \
+apt-get install -y \
 	ubuntu-restricted-extras \
 	libavcodec-extra \
 	libdvd-pkg
@@ -23,11 +23,11 @@ apt-get install \
 wget -O /tmp/linux_signing_key.pub https://dl.google.com/linux/linux_signing_key.pub
 apt-key add /tmp/linux_signing_key.pub
 apt-get update
-apt-get install google-chrome-stable
+apt-get install -y google-chrome-stable
 rm /tmp/linux_signing_key.pub
 
 # install apps
-apt-get install \
+apt-get install -y \
 	audacity \
 	blender \
 	filezilla \
@@ -49,6 +49,7 @@ apt-get install \
 	speedtest-cli \
 	steam \
 	texstudio \
+	tlp \
 	vlc
 
 # install snaps
