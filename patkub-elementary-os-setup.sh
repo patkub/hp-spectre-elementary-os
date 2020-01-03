@@ -27,6 +27,7 @@ apt-get install \
 	kdenlive \
 	krita \
 	libreoffice \
+	linuxdcpp \
 	mpv \
 	qbittorrent \
 	snapd \
