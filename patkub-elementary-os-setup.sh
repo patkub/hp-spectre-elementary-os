@@ -17,12 +17,15 @@ apt-get install \
 	firefox \
 	gimp \
 	kazam \
+	kdenlive \
 	krita \
+	libreoffice \
 	mpv \
 	qbittorrent \
 	snapd \
 	steam \
-	textstudio
+	textstudio \
+	vlc
 
 # install snaps
 snap install slack --classic
