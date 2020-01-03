@@ -30,6 +30,7 @@ rm /tmp/linux_signing_key.pub
 apt-get install \
 	audacity \
 	blender \
+	filezilla \
 	firefox \
 	gimp \
 	git \
