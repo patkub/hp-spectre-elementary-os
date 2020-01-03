@@ -16,6 +16,7 @@ apt-get install \
 	blender \
 	firefox \
 	gimp \
+	gnome-system-monitor \
 	kazam \
 	kdenlive \
 	krita \
