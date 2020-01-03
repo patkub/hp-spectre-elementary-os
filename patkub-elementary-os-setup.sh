@@ -43,6 +43,7 @@ apt-get install \
 	linuxdcpp \
 	mpv \
 	nload \
+	neofetch \
 	qbittorrent \
 	snapd \
 	speedtest-cli \
