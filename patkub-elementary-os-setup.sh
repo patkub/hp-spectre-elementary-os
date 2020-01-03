@@ -59,6 +59,7 @@ apt-get install -y \
 	p7zip \
 	psensor \
 	qbittorrent \
+	screen \
 	snapd \
 	speedtest-cli \
 	steam \
