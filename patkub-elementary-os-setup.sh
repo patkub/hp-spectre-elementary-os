@@ -88,3 +88,6 @@ cat > "$HOME/.config/gtk-3.0/settings.ini" <<EOL
 [Settings]
 gtk-application-prefer-dark-theme=1
 EOL
+
+# desktop background
+gsettings set org.gnome.desktop.background picture-uri 'file:///usr/share/backgrounds/Morskie%20Oko.jpg'
