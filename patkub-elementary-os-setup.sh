@@ -99,7 +99,3 @@ cp ./assets/bright /usr/local/bin
 cp ./assets/set-bright /usr/local/bin
 chmod +x /usr/local/bin/bright
 chmod +x /usr/local/bin/set-bright
-
-# set brightness on start
-cp ./assets/set-bright.desktop ~/.config/autostart
-chmod 744 ~/.config/autostart/set-bright.desktop
