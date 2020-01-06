@@ -83,6 +83,7 @@ snap install node --classic
 snap install xournalpp
 
 # dark theme
+mkdir -p "$HOME/.config/gtk-3.0/"
 touch "$HOME/.config/gtk-3.0/settings.ini"
 cat > "$HOME/.config/gtk-3.0/settings.ini" <<EOL
 [Settings]
@@ -91,3 +92,8 @@ EOL
 
 # desktop background
 gsettings set org.gnome.desktop.background picture-uri 'file:///usr/share/backgrounds/Morskie%20Oko.jpg'
+
+# brightness fix
+mkdir -p /usr/local/bin
+cp ./assets/bright /usr/local/bin
+chmod +x /usr/local/bin/bright
