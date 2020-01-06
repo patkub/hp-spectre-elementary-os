@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=SetBrightStartup
+GenericName=SetBrightStartup
+Comment=set bright config startup script
+Icon=preferences-system
+Categories=Settings;
+Exec=set-bright 0.35
+TryExec=xrandr
+Terminal=false
+X-GNOME-Autostart-enabled=true

@@ -1,0 +1,11 @@
+#!/bin/bash
+
+#MON="eDP-1-1"    # Discover monitor name with: xrandr | grep " connected"
+MON=`xrandr | grep " connected" | cut -d ' ' -f 1`
+
+xrandr --output "$MON" --brightness "$1"   # Set new brightness
+
+# Display current brightness
+printf "Monitor $MON "
+echo $( xrandr --verbose --current | grep ^"$MON" -A5 | tail -n1 )
+
