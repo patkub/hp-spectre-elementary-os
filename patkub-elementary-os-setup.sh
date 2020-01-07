@@ -65,16 +65,15 @@ apt-get install -y \
 	vlc
 
 # install snaps
-snap install slack --classic
-
-# vscode
-snap install code --classic
-
-snap install discord
 
 # nodejs
 snap install --edge node --classic
-
+# vscode
+snap install code --classic
+snap install discord
+snap install slack --classic
+snap install intellij-idea-community --classic
+snap install pycharm-community --classic
 # notetaking
 snap install xournalpp
 
