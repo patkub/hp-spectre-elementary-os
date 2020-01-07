@@ -11,5 +11,5 @@ sudo apt install linux-oem-osp1 linux-firmware
 Source: [https://askubuntu.com/a/1169395](https://askubuntu.com/a/1169395)
 
 ### Sources
-
-[Dark themes for writing](https://robjhyndman.com/hyndsight/dark-themes-for-writing/)
+* [Dark themes for writing](https://robjhyndman.com/hyndsight/dark-themes-for-writing/)
+* [Keybindings](https://askubuntu.com/a/597414)
