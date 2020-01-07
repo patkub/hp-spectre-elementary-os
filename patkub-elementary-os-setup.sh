@@ -24,6 +24,7 @@ apt-get install -y \
 	ubuntu-restricted-extras \
 	libavcodec-extra \
 	libdvd-pkg
+dpkg-reconfigure libdvd-pkg
 
 # uninstall default apps
 apt-get purge -y \
