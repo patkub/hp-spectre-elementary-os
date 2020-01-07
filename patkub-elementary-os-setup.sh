@@ -19,13 +19,6 @@ ubuntu-drivers autoinstall
 apt-get install -y software-properties-common
 apt-get update
 
-# multimedia codecs and dvd playback
-apt-get install -y \
-	ubuntu-restricted-extras \
-	libavcodec-extra \
-	libdvd-pkg
-dpkg-reconfigure libdvd-pkg
-
 # uninstall default apps
 apt-get purge -y \
 	epiphany-browser \
