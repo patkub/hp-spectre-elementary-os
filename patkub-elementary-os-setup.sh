@@ -78,6 +78,9 @@ snap install pycharm-community --classic
 # notetaking
 snap install xournalpp
 
+# touchpad areas
+gsettings set org.gnome.desktop.peripherals.touchpad click-method 'areas'
+
 # dark theme
 mkdir -p "$HOME/.config/gtk-3.0/"
 touch "$HOME/.config/gtk-3.0/settings.ini"
