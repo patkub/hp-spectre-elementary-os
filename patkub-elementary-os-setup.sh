@@ -77,7 +77,7 @@ snap install code --classic
 snap install discord
 
 # nodejs
-snap install node --classic
+snap install --edge node --classic
 
 # notetaking
 snap install xournalpp
