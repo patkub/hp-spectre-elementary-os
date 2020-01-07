@@ -12,8 +12,10 @@ apt-get update
 # enable wifi
 apt-get install -y linux-oem-osp1 linux-firmware
 
-# drivers
+# nvidia drivers
 ubuntu-drivers autoinstall
+# use integrated graphics by default
+prime-select intel
 
 # manage the repositories that you install software from (common)
 apt-get install -y software-properties-common
