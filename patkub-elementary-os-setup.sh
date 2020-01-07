@@ -2,8 +2,8 @@
 
 # ask for sudo
 if [ $EUID != 0 ]; then
-    sudo "$0" "$@"
-    exit $?
+  sudo "$0" "$@"
+  exit $?
 fi
 
 # download package info
@@ -83,6 +83,9 @@ cat > "$HOME/.config/gtk-3.0/settings.ini" <<EOL
 [Settings]
 gtk-application-prefer-dark-theme=1
 EOL
+
+# texstudio dark theme
+cp ./assets/.dark.txsprofile ~/.dark.txsprofile
 
 # desktop background
 gsettings set org.gnome.desktop.background picture-uri 'file:///usr/share/backgrounds/Morskie%20Oko.jpg'
