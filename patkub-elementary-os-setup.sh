@@ -23,9 +23,9 @@ apt-get update
 
 # uninstall default apps
 apt-get purge -y \
-	epiphany-browser \
-	epiphany-browser-data \
-	pantheon-mail
+  epiphany-browser \
+  epiphany-browser-data \
+  pantheon-mail
 
 # install google chrome
 wget -O /tmp/linux_signing_key.pub https://dl.google.com/linux/linux_signing_key.pub
@@ -36,33 +36,34 @@ rm /tmp/linux_signing_key.pub
 
 # install apps
 apt-get install -y \
-	audacity \
-	blender \
-	filezilla \
-	firefox \
-	gimp \
-	git \
-	gnome-system-monitor \
-	htop \
-	kazam \
-	kdenlive \
-	krita \
-	libreoffice \
-	linuxdcpp \
-	mpv \
-	nload \
-	neofetch \
-	p7zip \
-	psensor \
-	qbittorrent \
-	screen \
-	snapd \
-	speedtest-cli \
-	steam \
-	texstudio \
-	tlp \
-	thunderbird \
-	vlc
+  audacity \
+  blender \
+  default-jdk \
+  filezilla \
+  firefox \
+  gimp \
+  git \
+  gnome-system-monitor \
+  htop \
+  kazam \
+  kdenlive \
+  krita \
+  libreoffice \
+  linuxdcpp \
+  mpv \
+  nload \
+  neofetch \
+  p7zip \
+  psensor \
+  qbittorrent \
+  screen \
+  snapd \
+  speedtest-cli \
+  steam \
+  texstudio \
+  tlp \
+  thunderbird \
+  vlc
 
 # install snaps
 
