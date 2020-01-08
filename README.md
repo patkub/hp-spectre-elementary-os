@@ -1,6 +1,6 @@
 ## HP Spectre x360 15t 5KC45AV
 
-> Documentation of setting up Elementary OS on HP Spectre x360 15t 5KC45AV
+> Documentation of setting up Elementary OS 5.1 Hera on HP Spectre x360 15t 5KC45AV
 
 ### Script
 

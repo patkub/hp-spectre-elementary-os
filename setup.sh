@@ -61,8 +61,12 @@ case $CHOICE in
     ;;
   3)
     # install apps
-    # manage the repositories that you install software from (common)
+    # manage the repositories that you install software from
     apt-get install -y software-properties-common
+    add-apt-repository -y ppa:andreasbutti/xournalpp-master
+    add-apt-repository -y ppa:libreoffice/ppa
+    add-apt-repository -y ppa:philip.scott/elementary-tweaks
+    add-apt-repository -y ppa:ubuntuhandbook1/audacity
     apt-get update
 
     # uninstall default apps
@@ -70,6 +74,7 @@ case $CHOICE in
       epiphany-browser \
       epiphany-browser-data \
       pantheon-mail
+    apt-get autoremove
 
     # install google chrome
     wget -O /tmp/linux_signing_key.pub https://dl.google.com/linux/linux_signing_key.pub
@@ -81,17 +86,14 @@ case $CHOICE in
     # install apps
     apt-get install -y \
       audacity \
-      blender \
       default-jdk \
+      elementary-tweaks \
       filezilla \
       firefox \
-      gimp \
       git \
       gnome-system-monitor \
       htop \
       kazam \
-      kdenlive \
-      krita \
       libreoffice \
       linuxdcpp \
       mpv \
@@ -107,20 +109,28 @@ case $CHOICE in
       texstudio \
       tlp \
       thunderbird \
-      vlc
+      # notetaking
+      xournalpp
+
+    # fix xournalpp icon
+    cp ./assets/com.github.xournalpp.xournalpp.svg /usr/share/applications
+    sed -i 's/Icon=com.github.xournalpp.xournalpp/Icon=\/usr\/share\/applications\/com.github.xournalpp.xournalpp.svg/' /usr/share/applications/com.github.xournalpp.xournalpp.desktop
     ;;
   4)
     # install snaps
-    snap install discord
-    snap install slack --classic
-    # notetaking
-    snap install xournalpp
-    # nodejs
-    snap install --edge node --classic
+    snap install blender --classic
     # vscode
     snap install code --classic
+    snap install discord
+    snap install gimp
     snap install intellij-idea-community --classic
+    snap install kdenlive
+    snap install krita
+    # nodejs
+    snap install --edge node --classic
     snap install pycharm-community --classic
+    snap install slack --classic
+    snap install vlc
     ;;
   5)
     # dark theme
