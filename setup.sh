@@ -23,8 +23,8 @@ apt-get install dialog
 
 # dialog menu
 HEIGHT=15
-WIDTH=40
-CHOICE_HEIGHT=4
+WIDTH=80
+CHOICE_HEIGHT=6
 BACKTITLE="Setup Elementary OS on HP Spectre x360 15t 5KC45AV"
 TITLE="Setup"
 MENU="Choose one of the following options:"
