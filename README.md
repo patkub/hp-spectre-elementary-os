@@ -2,6 +2,12 @@
 
 > Documentation of setting up Elementary OS on HP Spectre x360 15t 5KC45AV
 
+### Script
+
+```
+./setup.sh
+```
+
 ### Enable WiFi
 
 ```
