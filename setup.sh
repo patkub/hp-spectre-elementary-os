@@ -49,6 +49,13 @@ case $CHOICE in
     ubuntu-drivers autoinstall
     # use integrated graphics by default
     prime-select intel
+    
+    # multimedia codecs and dvd playback
+    apt-get install -y \
+      ubuntu-restricted-extras \
+      libavcodec-extra \
+      libdvd-pkg
+    dpkg-reconfigure libdvd-pkg
     ;;
   3)
     # install apps
