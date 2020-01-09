@@ -10,7 +10,7 @@
 
 ### Enable WiFi
 
-Install 5.4.10 kernel https://kernel.ubuntu.com/~kernel-ppa/mainline/v5.4.10/
+Install 5.4.10 kernel from [https://kernel.ubuntu.com/~kernel-ppa/mainline/v5.4.10/](https://kernel.ubuntu.com/~kernel-ppa/mainline/v5.4.10/)
 ```
 wget https://kernel.ubuntu.com/~kernel-ppa/mainline/v5.4.10/linux-headers-5.4.10-050410_5.4.10-050410.202001091038_all.deb
 wget https://kernel.ubuntu.com/~kernel-ppa/mainline/v5.4.10/linux-headers-5.4.10-050410-generic_5.4.10-050410.202001091038_amd64.deb
@@ -28,7 +28,7 @@ Run `sudo update-grub` to regenerate GRUB config.
 
 Sound and WiFi are working
 
-Source: https://bbs.archlinux.org/viewtopic.php?pid=1876701#p1876701
+Source: [https://bbs.archlinux.org/viewtopic.php?pid=1876701#p1876701](https://bbs.archlinux.org/viewtopic.php?pid=1876701#p1876701)
 
 ### Sources
 * [Dark themes for writing](https://robjhyndman.com/hyndsight/dark-themes-for-writing/)
