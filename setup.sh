@@ -121,9 +121,9 @@ case $CHOICE in
     ;;
   4)
     # dark theme
-    mkdir -p "$HOME/.config/gtk-3.0/"
-    touch "$HOME/.config/gtk-3.0/settings.ini"
-    cat > "$HOME/.config/gtk-3.0/settings.ini" <<EOL
+    mkdir -p "~/.config/gtk-3.0/"
+    touch "~/.config/gtk-3.0/settings.ini"
+    cat > "~/.config/gtk-3.0/settings.ini" <<EOL
 [Settings]
 gtk-application-prefer-dark-theme=1
 EOL
