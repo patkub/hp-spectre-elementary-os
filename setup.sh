@@ -1,16 +1,10 @@
 #!/bin/bash
 
-# ask for sudo
-if [ $EUID != 0 ]; then
-  sudo "$0" "$@"
-  exit $?
-fi
-
 # download package info
-apt-get update
+sudo apt-get update
 
 # dialog
-apt-get install dialog
+sudo apt-get install dialog
 
 # dialog menu
 HEIGHT=15
@@ -21,12 +15,11 @@ TITLE="Setup"
 MENU="Choose one of the following options:"
 
 OPTIONS=(
-  1 "Enable WiFi (requires reboot)"
-  2 "Install drivers"
-  3 "Install apps"
-  4 "Install snaps (before installing snaps, logout and log back in)"
-  5 "Dark theme"
-  6 "Brightness fix"
+  1 "Install drivers"
+  2 "Install apps"
+  3 "Install snaps (before installing snaps, logout and log back in)"
+  4 "Dark theme"
+  5 "Brightness fix"
 )
 
 CHOICE=$(dialog --clear \
@@ -40,49 +33,45 @@ CHOICE=$(dialog --clear \
 clear
 case $CHOICE in
   1)
-    # enable wifi
-    apt-get install -y linux-oem-osp1 linux-firmware
-    ;;
-  2)
     # install drivers
     # nvidia drivers
-    ubuntu-drivers autoinstall
+    sudo ubuntu-drivers autoinstall
     # use integrated graphics by default
-    prime-select intel
+    sudo prime-select intel
     
     # multimedia codecs and dvd playback
-    apt-get install -y \
+    sudo apt-get install -y \
       ubuntu-restricted-extras \
       libavcodec-extra \
       libdvd-pkg
-    dpkg-reconfigure libdvd-pkg
+    sudo dpkg-reconfigure libdvd-pkg
     ;;
-  3)
+  2)
     # install apps
     # manage the repositories that you install software from
-    apt-get install -y software-properties-common
-    add-apt-repository -y ppa:andreasbutti/xournalpp-master
-    add-apt-repository -y ppa:libreoffice/ppa
-    add-apt-repository -y ppa:philip.scott/elementary-tweaks
-    add-apt-repository -y ppa:ubuntuhandbook1/audacity
-    apt-get update
+    sudo apt-get install -y software-properties-common
+    sudo add-apt-repository -y ppa:andreasbutti/xournalpp-master
+    sudo add-apt-repository -y ppa:libreoffice/ppa
+    sudo add-apt-repository -y ppa:philip.scott/elementary-tweaks
+    sudo add-apt-repository -y ppa:ubuntuhandbook1/audacity
+    sudo apt-get update
 
     # uninstall default apps
-    apt-get purge -y \
+    sudo apt-get purge -y \
       epiphany-browser \
       epiphany-browser-data \
       pantheon-mail
-    apt-get autoremove
+    sudo apt-get autoremove
 
     # install google chrome
     wget -O /tmp/linux_signing_key.pub https://dl.google.com/linux/linux_signing_key.pub
-    apt-key add /tmp/linux_signing_key.pub
-    apt-get update
-    apt-get install -y google-chrome-stable
+    sudo apt-key add /tmp/linux_signing_key.pub
+    sudo apt-get update
+    sudo apt-get install -y google-chrome-stable
     rm /tmp/linux_signing_key.pub
     
     # install apps
-    apt-get install -y \
+    sudo apt-get install -y \
       audacity \
       default-jdk \
       elementary-tweaks \
@@ -111,26 +100,26 @@ case $CHOICE in
       xournalpp
 
     # fix xournalpp icon
-    cp ./assets/com.github.xournalpp.xournalpp.svg /usr/share/applications
-    sed -i 's/Icon=com.github.xournalpp.xournalpp/Icon=\/usr\/share\/applications\/com.github.xournalpp.xournalpp.svg/' /usr/share/applications/com.github.xournalpp.xournalpp.desktop
+    sudo cp ./assets/com.github.xournalpp.xournalpp.svg /usr/share/applications
+    sudo sed -i 's/Icon=com.github.xournalpp.xournalpp/Icon=\/usr\/share\/applications\/com.github.xournalpp.xournalpp.svg/' /usr/share/applications/com.github.xournalpp.xournalpp.desktop
+    ;;
+  3)
+    # install snaps
+    sudo snap install blender --classic
+    # vscode
+    sudo snap install code --classic
+    sudo snap install discord
+    sudo snap install gimp
+    sudo snap install intellij-idea-community --classic
+    sudo snap install kdenlive
+    sudo snap install krita
+    # nodejs
+    sudo snap install --edge node --classic
+    sudo snap install pycharm-community --classic
+    sudo snap install slack --classic
+    sudo snap install vlc
     ;;
   4)
-    # install snaps
-    snap install blender --classic
-    # vscode
-    snap install code --classic
-    snap install discord
-    snap install gimp
-    snap install intellij-idea-community --classic
-    snap install kdenlive
-    snap install krita
-    # nodejs
-    snap install --edge node --classic
-    snap install pycharm-community --classic
-    snap install slack --classic
-    snap install vlc
-    ;;
-  5)
     # dark theme
     mkdir -p "$HOME/.config/gtk-3.0/"
     touch "$HOME/.config/gtk-3.0/settings.ini"
@@ -145,13 +134,13 @@ EOL
     # desktop background
     gsettings set org.gnome.desktop.background picture-uri 'file:///usr/share/backgrounds/Morskie%20Oko.jpg'
     ;;
-  6)
+  5)
     # brightness fix
-    mkdir -p /usr/local/bin
-    cp ./assets/bright /usr/local/bin
-    cp ./assets/set-bright /usr/local/bin
-    chmod +x /usr/local/bin/bright
-    chmod +x /usr/local/bin/set-bright
+    sudo mkdir -p /usr/local/bin
+    sudo cp ./assets/bright /usr/local/bin
+    sudo cp ./assets/set-bright /usr/local/bin
+    sudo chmod +x /usr/local/bin/bright
+    sudo chmod +x /usr/local/bin/set-bright
     # brightness fix key bindings
     ./assets/set_customshortcut.py 'bright -' 'bright -' '<Primary>F2'
     ./assets/set_customshortcut.py 'bright +' 'bright +' '<Primary>F3'
