@@ -24,7 +24,7 @@ Edit `/etc/default/grub`, set
 ```
 GRUB_CMDLINE_LINUX_DEFAULT="quiet splash acpi_backlight=vendor acpi_osi='!Windows 2013' acpi_osi='!Windows 2012' snd_hda_intel.dmic_detect=0"
 ```
-Run `sudo update-grub` to regenerate GRUB config.
+Run `sudo update-grub` to regenerate GRUB config
 
 Sound and WiFi are working
 
