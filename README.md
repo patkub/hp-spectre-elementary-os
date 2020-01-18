@@ -33,3 +33,4 @@ Source: [https://bbs.archlinux.org/viewtopic.php?pid=1876701#p1876701](https://b
 ### Sources
 * [Dark themes for writing](https://robjhyndman.com/hyndsight/dark-themes-for-writing/)
 * [Keybindings](https://askubuntu.com/a/597414)
+
