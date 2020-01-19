@@ -53,6 +53,7 @@ case $CHOICE in
     sudo add-apt-repository -y ppa:andreasbutti/xournalpp-master
     sudo add-apt-repository -y ppa:freecad-maintainers/freecad-stable
     sudo add-apt-repository -y ppa:libreoffice/ppa
+    sudo add-apt-repository -y ppa:mc3man/mpv-tests
     sudo add-apt-repository -y ppa:philip.scott/elementary-tweaks
     sudo add-apt-repository -y ppa:ubuntuhandbook1/audacity
     sudo apt-get update
