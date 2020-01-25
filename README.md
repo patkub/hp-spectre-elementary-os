@@ -32,7 +32,12 @@ Source: [https://bbs.archlinux.org/viewtopic.php?pid=1876701#p1876701](https://b
 
 ### Brightness Fix for OLED
 
-Run the `monitor-backlight` script at startup
+The `monitor-backlight` script listens to display changes and the `set-bright` script sets the initial display brightness as a percentage from `0` to `1.0`.
+
+Settings > Applications > Startup > Add Startup App... > Type in a custom command  
+`/usr/local/bin/monitor-backlight`  
+and  
+`/usr/local/bin/set-bright 0.45`
 
 Source: [AW13 OLED Monitor Brightness](https://gist.github.com/joel-wright/68fc3031cbb3f7cd25db1ed2fe656e60)
 
