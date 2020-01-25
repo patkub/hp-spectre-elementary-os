@@ -142,11 +142,8 @@ EOL
   5)
     # brightness fix
     sudo mkdir -p /usr/local/bin
-    sudo cp ./assets/bright /usr/local/bin
+    sudo cp ./assets/monitor-backlight /usr/local/bin
     sudo cp ./assets/set-bright /usr/local/bin
-    sudo chmod +x /usr/local/bin/bright
+    sudo chmod +x /usr/local/bin/monitor-backlight
     sudo chmod +x /usr/local/bin/set-bright
-    # brightness fix key bindings
-    ./assets/set_customshortcut.py 'bright -' 'bright -' '<Primary>F2'
-    ./assets/set_customshortcut.py 'bright +' 'bright +' '<Primary>F3'
 esac
