@@ -30,6 +30,12 @@ Sound and WiFi are working
 
 Source: [https://bbs.archlinux.org/viewtopic.php?pid=1876701#p1876701](https://bbs.archlinux.org/viewtopic.php?pid=1876701#p1876701)
 
+### Brightness Fix for OLED
+
+Run the `monitor-backlight` script at startup
+
+Source: [AW13 OLED Monitor Brightness](https://gist.github.com/joel-wright/68fc3031cbb3f7cd25db1ed2fe656e60)
+
 ### Sources
 * [Dark themes for writing](https://robjhyndman.com/hyndsight/dark-themes-for-writing/)
 * [Keybindings](https://askubuntu.com/a/597414)
