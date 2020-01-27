@@ -41,6 +41,37 @@ and
 
 Source: [AW13 OLED Monitor Brightness](https://gist.github.com/joel-wright/68fc3031cbb3f7cd25db1ed2fe656e60)
 
+### Disable suspend
+
+Laptop won't wake from suspend, and requires a power cycling. To disable suspend, create the following file as root:
+
+`/etc/polkit-1/localauthority/50-local.d/com.ubuntu.disable-suspend.pkla`
+
+```
+[Disable suspend (upower)]
+Identity=unix-user:*
+Action=org.freedesktop.upower.suspend
+ResultActive=no
+ResultInactive=no
+ResultAny=no
+
+[Disable suspend (logind)]
+Identity=unix-user:*
+Action=org.freedesktop.login1.suspend
+ResultActive=no
+ResultInactive=no
+ResultAny=no
+
+[Disable suspend when others are logged in (logind)]
+Identity=unix-user:*
+Action=org.freedesktop.login1.suspend-multiple-sessions
+ResultActive=no
+ResultInactive=no
+ResultAny=no
+```
+
+Source: [https://askubuntu.com/a/488300](How to disable suspend in 14.04?)
+
 ### Sources
 * [Dark themes for writing](https://robjhyndman.com/hyndsight/dark-themes-for-writing/)
 * [Keybindings](https://askubuntu.com/a/597414)
