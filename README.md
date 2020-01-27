@@ -70,7 +70,7 @@ ResultInactive=no
 ResultAny=no
 ```
 
-Source: [https://askubuntu.com/a/488300](How to disable suspend in 14.04?)
+Source: [How to disable suspend in 14.04?](https://askubuntu.com/a/488300)
 
 ### Sources
 * [Dark themes for writing](https://robjhyndman.com/hyndsight/dark-themes-for-writing/)
