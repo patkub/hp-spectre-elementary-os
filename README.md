@@ -43,7 +43,7 @@ Source: [AW13 OLED Monitor Brightness](https://gist.github.com/joel-wright/68fc3
 
 ### Disable suspend
 
-Laptop won't wake from suspend, and requires a power cycling. To disable suspend, create the following file as root:
+Laptop won't wake from suspend, and requires power cycling. To disable suspend, create the following file as root:
 
 `/etc/polkit-1/localauthority/50-local.d/com.ubuntu.disable-suspend.pkla`
 
