@@ -94,6 +94,7 @@ case $CHOICE in
       p7zip \
       psensor \
       qbittorrent \
+      qalculate \
       screen \
       snapd \
       speedtest-cli \
