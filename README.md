@@ -4,14 +4,14 @@
 
 ### Script
 
-```
+```bash
 ./setup.sh
 ```
 
 ### Enable WiFi
 
 Install 5.4.10 kernel from [https://kernel.ubuntu.com/~kernel-ppa/mainline/v5.4.10/](https://kernel.ubuntu.com/~kernel-ppa/mainline/v5.4.10/)
-```
+```bash
 wget https://kernel.ubuntu.com/~kernel-ppa/mainline/v5.4.10/linux-headers-5.4.10-050410_5.4.10-050410.202001091038_all.deb
 wget https://kernel.ubuntu.com/~kernel-ppa/mainline/v5.4.10/linux-headers-5.4.10-050410-generic_5.4.10-050410.202001091038_amd64.deb
 wget https://kernel.ubuntu.com/~kernel-ppa/mainline/v5.4.10/linux-image-unsigned-5.4.10-050410-generic_5.4.10-050410.202001091038_amd64.deb
@@ -71,6 +71,23 @@ ResultAny=no
 ```
 
 Source: [How to disable suspend in 14.04?](https://askubuntu.com/a/488300)
+
+### Qt apps dark theme
+
+```bash
+sudo apt-get install qt5ct
+```
+
+Open Qt5 Settings app and select `gtk2` from the style dropdown
+
+Append the following lines to `~/.profile`
+
+```bash
+unset QT_STYLE_OVERRIDE
+export QT_QPA_PLATFORMTHEME="qt5ct"
+```
+
+Source: [r/elementaryos Qt apps not conforming to dark theme](https://www.reddit.com/r/elementaryos/comments/cz11uc/qt_apps_not_conforming_to_dark_theme/)
 
 ### Sources
 * [Dark themes for writing](https://robjhyndman.com/hyndsight/dark-themes-for-writing/)
