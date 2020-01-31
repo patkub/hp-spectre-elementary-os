@@ -2,6 +2,15 @@
 
 > Documentation of setting up Elementary OS 5.1 Hera on HP Spectre x360 15t 5KC45AV
 
+## Table of Contents
+* [Script](#script)
+* [Enable WiFi](#enable-wifi)
+* [Brightness Fix for OLED](#brightness-fix-for-oled)
+* [Disable suspend](#disable-suspend)
+* [Qt apps dark theme](#qt-apps-dark-theme)
+* [Sources](#sources)
+
+
 ### Script
 
 ```bash
