@@ -13,6 +13,8 @@
 
 ### Script
 
+A menu to install apps and configure settings
+
 ```bash
 ./setup.sh
 ```
